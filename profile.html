@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body>
+    <header class="">
+        <nav class="px-5 flex justify-between items-center mx-auto py-3 bg-white md:py-5 lg:px-15">
+            <h1 class="text-2xl font-bold text-slate-900"> ALART </h1>
+            <ul class="hidden gap-5 font-medium text-slate-900 md:flex md:text-sm">
+                <li> <a href="index.html" class="">Home</a></li>
+                <li> <a href="./shopping.html" class=" ">Shop</a></li>
+                <li> <a href="service.html" class=" ">About us</a></li>
+                <li> <a href="./service.html" class=""> Contact </a> </li>
+                <li id="login"> <a href="login.html" class="" > Login </a> </li>
+            </ul>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="cursor-pointer"> &#9776;</button>    
+                <div id="mobile-menu" class="absolute right-4 top-12 border-2 text-center bg-white z-10 hidden md:hidden px-6">
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Home</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Shop</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Collection</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">About</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Login</a>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    <section class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-2xl">
+    <!-- Top Section -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 ">
+        <!-- Left: Image, Name, Email -->
+        <div class="flex items-center space-x-4">
+        <img src="images/shopping-images/1.jpg" alt="Profile" class="w-20 h-20 rounded-full object-cover">
+        <div>
+            <h2 class="text-xl font-semibold text-gray-800">Clarenz Luigi Rosales</h2>
+            <p class="text-sm text-gray-500">renzz@gmail.com</p>
+        </div>
+        </div>
+
+        <!-- Right: Edit and Settings -->
+        <div class="mt-4 md:mt-0 flex space-x-3">
+        <button class="px-4 py-2 bg-slate-800 text-white rounded hover:bg-slate-600 transition">Edit Profile</button>
+        <button id="logout-btn" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">Log Out</button>
+        </div>
+    </div>
+
+        <hr class="mb-6 border-gray-300">
+
+    <!-- Customer Info Section -->
+        <div class="grid gap-4 md:grid-cols-2 text-sm text-gray-700">
+            <div>
+            <p class="font-medium text-gray-900">Address: </p>
+            <p>123 Brgy. Mabini, Quezon City, Metro Manila</p>
+            </div>
+            <div>
+            <p class="font-medium text-gray-900">Member Since</p>
+            <p>March 2025</p>
+            </div>
+            <div>
+            <p class="font-medium text-gray-900">Preferences: </p>
+            <p>Abstract</p>
+            <p>Baroque</p>
+            <p>Renaissance</p>
+            </div>
+        </div>
+    </section>
+    <script src="../script.js"></script>
+</body>
+</html>

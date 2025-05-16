@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-[#f8f6f2]">
+    <div class="h-screen flex justify-center items-center ">
+        <div class="rounded-2xl md:max-h-[80vh] md:flex">
+            <!-- text -->
+            <div class="border-gray-800 md:w-full py-5 px-10 space-y-5  flex flex-col justify-center border-2 md:rounded-tr-2xl md:rounded-br-2xl">
+                <div class="text-center">
+                    <h1 class="text-6xl font-[Montserrat] text-[#c2a284] font-bold"> ALART</h1>
+                    <div class="w-4/5 mx-auto">
+                        <p class="text-gray-400 text-lg font-medium">"Discover high-quality recreations of famous and iconic art"</p>
+                    </div>
+                </div>
+                <form id="register-form" class="grid grid-cols-2 gap-3">
+                    <label for="password" class="flex items-center gap-1.5 border-2 border-gray-800 rounded-md px-5 text-lg ">
+                       
+                        <input class="focus:outline-none py-3 w-full" name="email" type="email" required placeholder="xyz@gmail.com" id="password"> 
+                    </label>
+                    <label for="user" class="group flex border-2 rounded-md items-center gap-1.5  text-lg px-5">
+                        <input class="focus:outline-none py-3 w-full" name="user" type="text" required placeholder="username" id="user">
+                    </label>
+                    <label for="password" class="flex items-center gap-1.5 border-2 border-gray-800 rounded-md px-5 text-lg ">
+                        <input class="focus:outline-none py-3 w-full" name="password" type="password" required placeholder="password" id="password"> 
+                    </label>
+                    <label for="password" class="flex items-center gap-1.5 border-2 border-gray-800 rounded-md px-5 text-lg ">
+                        <input class="focus:outline-none py-3 w-full" name="name" type="text" required placeholder="name" id="name"> 
+                    </label>
+                    <label for="password" class="flex items-center gap-1.5 border-2 border-gray-800 rounded-md px-5 text-lg ">
+                        <input class="focus:outline-none py-3 w-full" name="address" type="text" required placeholder="location address" id="address"> 
+                    </label>
+                    <label for="password" class="flex items-center gap-1.5 border-2 border-gray-800 rounded-md px-5 text-lg ">
+                        <input class="focus:outline-none py-3 w-full" name="contact" type="number" required placeholder="contact number" id="contact"> 
+                    </label>
+                    <!-- <label for="remember" class="flex items-center w-fit gap-2">
+                        <input type="checkbox" id="remember"> remember me
+                    </label> -->
+                <div class="">
+                    <button id="register-btn" type="submit" class="w-full rounded-md cursor-pointer mb-5 p-3 border-2 border-gray-800 text-lg shadow-[-10px_10px_0px_0px_rgba(194,162,132,1)] active:translate-x-[-10px] active:translate-y-[10px] active:shadow-none transition-all duration-150 ease-in-out">
+                        SIGN UP
+                    </button>
+                    <p class="text-center"> already have an account? <a href="login.html" class="text-[#c2a284] font-bold shadow-2xl">sign in</a> </p>
+                </div>
+                </form>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

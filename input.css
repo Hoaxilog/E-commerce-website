@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@layer theme, base, components, utilities;
+/* use @theme for configuration or add your own custome style and name */
+@theme { 
+    --color-primary: #121063;
+    --color-tahiti: #3ab7bf;
+    --color-bermuda: #78dcca;
+}
+/* base = elements, components = your own style that like have many style on it like for .card thath as border color size etc */
+/* this is a way on how to apply some style in the element tage by using @layer base */
+/* 
+@layer base {
+  input {
+    border: 2px solid black;
+  }
+} */
+
+

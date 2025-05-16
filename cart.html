@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>My Cart</title>
+</head>
+<body class="font-[Merriweather] ">
+    <header class="">   
+        <nav class="px-5 flex justify-between items-center mx-auto py-3 bg-white md:py-5 lg:px-15">
+            <h1 class="text-2xl font-bold text-slate-900"> SHOPPY </h1>
+            <ul class="hidden gap-5 font-medium text-slate-900 md:flex md:text-sm">
+                <li> <a href="./index.html" class="">Home</a></li>
+                <li> <a href="./shopping.html" class=" ">Shop</a></li>
+                <li> <a href="#" class=" ">Collection</a></li>
+                <li> <a href="#" class=" ">About</a></li>
+                <li> <a href="#" id="login" class=""> Login </a> </li>
+            </ul>
+            <i class="fa-solid fa-cart-shopping text-slate-900 cursor-pointer text-xl"></i>
+            <div class="md:hidden">
+                <button id="menu-btn" class="cursor-pointer"> &#9776;</button>    
+                <div id="mobile-menu" class="absolute right-4 top-12 border-2 text-center bg-white z-10 hidden md:hidden px-6">
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Home</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Shop</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Collection</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">About</a>
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+    
+        <div class="grid gap-y-5 justify-center pb-52" id="cartItem">
+            <div class="flex items-center justify-between mx-10">
+                <h1 class=" text-3xl"> Your Art Cart </h1>
+                <p class="bg-gray-200 py-1 px-4 rounded-4xl"> Cart item: </p>
+            </div>
+        </div>
+        <!-- checkout -->
+        <div class="flex justify-center items-center">
+            <div class="fixed bottom-0 left-0 right-0 bg-white border-t-2 shadow-md">
+                <div class="max-sm:space-y-2 sm:flex justify-end gap-10 items-center text-center px-5 py-8">
+                    <p  class="text-gray-500">Selected: <span id="total-item" class=" rounded-2xl px-3 text-black bg-gray-200 py-1"> 0 Items</span></p>
+                    <p  class="text-gray-500">Total: <span id="total-price" class="text-black text-2xl"> $ 0</span></p>
+                    <button id="checkout" class="bg-slate-800 text-white rounded-md w-full sm:w-auto px-6 py-2.5">Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="" class="success-message hidden bg-black/55 fixed inset-0 flex items-center justify-center ">
+            <div class="bg-white p-4 rounded-2xl ">
+                <h1 class="text-dark-grey mb-4 text-3xl leading-tight md:text-5xl">Thanks for Purchasing!</h1>
+                <p class="text-dark-grey mb-6 text-sm leading-relaxed">You will receive shipping updates and a receipt shortly.</p>
+                <button  class="p-3 dismiss-btn bg-slate-800 w-full rounded-md px-6 py-4 font-bold text-white transition-colors duration-300 hover:opacity-90">Dismiss message</button>
+            </div>
+        </div>
+
+        </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="font-[Merriweather] ">
+    <header class="">
+        <nav class="px-5 flex justify-between items-center mx-auto py-3 bg-white md:py-5 lg:px-15">
+            <h1 class="text-2xl font-bold text-slate-900"> ALART </h1>
+            <ul class="hidden gap-5 font-medium text-slate-900 md:flex md:text-sm">
+                <li> <a href="#" class="">Home</a></li>
+                <li> <a href="./shopping.html" class=" ">Shop</a></li>
+                <li> <a href="service.html" class=" ">About us</a></li>
+                <li> <a href="#footer" class=""> Contact </a> </li>
+                <li class="hidden login-icon"><a href="profile.html"><i class="fa-solid fa-user text-slate-900 cursor-pointer text-lg"></i></a></li>
+                <li class="login"> <a href="login.html" class="" > Login </a> </li>
+            </ul>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="cursor-pointer"> &#9776;</button>    
+                <div id="mobile-menu" class="absolute right-4 top-12 border-2 text-center bg-white z-10 hidden md:hidden px-6">
+                    <a href="#" class="block py-2 text-slate-900 hover:text-blue-500">Home</a>
+                    <a href="./shopping.html" class="block py-2 text-slate-900 hover:text-blue-500">Shop</a>
+                    <a href="service.html" class="block py-2 text-slate-900 hover:text-blue-500">About us</a>
+                    <a href="#footer" class="block py-2 text-slate-900 hover:text-blue-500">Contact</a>
+                    <a class="login-icon hidden" href="profile.html"><i class=" fa-solid fa-user text-slate-900 cursor-pointer text-lg"></i></a>
+                    <a href="login.html" class="login block py-2 text-slate-900 hover:text-blue-500">Login</a>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <main class="mx-auto">
+        <div class="hero-section relative px-5 lg:px-15"> 
+            <div class="bg-[url(/images/alter-bg.png)] w-full bg-no-repeat bg-cover bg-right  absolute inset-0 blur-[1px]"></div>
+            <div class="bg-gradient-to-r from-slate-800 opacity-70 to-transparent absolute inset-0"> </div>
+            <!-- <div class="sm:bg-gradient-to-r sm:from-[#8f7358] sm:to-transparent sm:absolute sm:inset-0"> </div> -->
+            <div class="relative tracking-wide md:max-w-130 py-27 text-center"> 
+                <h1 class="text-3xl font-bold text-shadow-lg/20 text-white md:text-5xl"> Experience Timeless Masterpieces</h1>
+                <p class="mt-2 text-white md:text-lg"> Discover high-quality creation and recreations of famous painting art, crafted to honor the vision of the original masters.</p>
+                <div class="mt-6">
+                    <a href="./shopping.html" class="bg-slate-900 py-3 px-5  rounded-sm text-white font-semibold cursor-pointer"> Shop now</a>
+                    <a class="bg-white py-3 px-2.5 mt-2 rounded-sm text-slate-900 font-semibold md:ml-2 md:px-4"> New arrivals</a>
+                </div>
+            </div>  
+        </div>
+        <!-- CATEGORIES -->
+        <section class="category px-5 py-20 mx-auto bg-gradient-to-t from-[#f8f6f2] to-transparent lg:px-15">
+            <div class="mb-10"> 
+                <h1 class="text-3xl mb-3"> Browse by Category </h1>
+                <p class="text-gray-600"> Discover artwork by medium and style to find the perfect piece for your collection. </p>
+            </div>
+
+            <div class="grid gap-2 text-white sm:grid-cols-2 md:grid-cols-4">
+                <div class="relative h-64 overflow-hidden group  rounded-md hover:cursor-pointer">
+                    <img class="w-full h-full object-center object-cover group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/renaissance.jpg" alt="Clothing" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent "> </div>
+                    <div class="absolute bottom-5 left-5">
+                        <h1 class=" font-semibold mb-1 text-2xl"> Renaissance Art</h1>
+                        <p class="font-[Montserrat] font-medium text-gray-300"> Explore category</p>
+                    </div>
+                </div>
+                <div class="relative h-64  group  overflow-hidden rounded-sm hover:cursor-pointer">
+                    <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/baroque.jpg" alt="Shoes" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent "> </div>
+                    <div class="absolute bottom-5 left-5">
+                        <h1 class=" font-semibold mb-1 text-2xl"> Baroque Art</h1>
+                        <p class="font-[Montserrat] font-medium text-gray-300"> Explore category</p>
+                    </div>
+                </div>
+                <div class="relative h-64  group  overflow-hidden rounded-sm hover:cursor-pointer">
+                    <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/expressionsm.jpg" alt="Accessories" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div>
+                    <div class="absolute bottom-5 left-5">
+                        <h1 class=" font-semibold mb-1 text-2xl"> Expressionism Art</h1>
+                        <p class="font-[Montserrat] font-medium text-gray-300"> Explore category</p>
+                    </div>
+                </div>
+                <div class="relative h-64  group overflow-hidden rounded-sm hover:cursor-pointer">
+                    <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/romanticism.jpg" alt="Find more" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div>
+                    <div class="absolute bottom-5 left-5">
+                        <h1 class=" font-semibold mb-1 text-2xl"> Romanticism Art</h1>
+                        <p class="font-[Montserrat] font-medium text-gray-300"> Explore category</p>
+                    </div>
+                </div>
+              </div>
+        </section>
+        <!-- LISTED ITEM -->
+        <section class="px-5 lg:px-15 pt-15">
+            <div class="mb-15">
+                <h1 class="text-3xl"> New Listed Arts </h1>
+                <p class="text-gray-500">Each piece is a faithful recreation of historical artworks from iconic periods</p>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="listed-item group shadow-lg rounded-md">
+                    <div class="relative h-64 overflow-hidden rounded-sm">
+                        <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/listed-item/item1.avif" alt="Find more" />
+                        <!-- <div class="invisible absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div> -->
+                        <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 ease-in ">
+                            <button class="hover:cursor-pointer w-full text-sm py-2 bg-white text-slate-900 "> Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="py-5 px-3   ">
+                        <h1 class="text-lg"> Name of the art</h1>
+                        <p class="text-sm text-gray-700"> Artist: Name</p>
+                        <h2 class="text-lg"> Price: 300$</h2>
+                    </div>
+                </article>
+                
+                <article class="listed-item group shadow-lg rounded-md">
+                    <div class="relative h-64  overflow-hidden rounded-sm">
+                        <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/listed-item/item2.avif" alt="Find more" />
+                        <!-- <div class="invisible absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div> -->
+                        <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 ease-in ">
+                            <button class="hover:cursor-pointer w-full text-sm py-2 bg-white text-slate-900 "> Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="py-5 px-3   ">
+                        <h1 class="text-lg"> Name of the art</h1>
+                        <p class="text-sm text-gray-700"> Artist: Name</p>
+                        <h2 class="text-lg"> Price: 300$</h2>
+                    </div>
+                </article>
+
+                <article class="listed-item group shadow-lg rounded-md">
+                    <div class="relative h-64  overflow-hidden rounded-sm">
+                        <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/listed-item/item3.jpg" alt="Find more" />
+                        <!-- <div class="invisible absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div> -->
+                        <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 ease-in ">
+                            <button class="hover:cursor-pointer w-full text-sm py-2 bg-white text-slate-900 "> Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="py-5 px-3   ">
+                        <h1 class="text-lg"> Name of the art</h1>
+                        <p class="text-sm text-gray-700"> Artist: Name</p>
+                        <h2 class="text-lg"> Price: 300$</h2>
+                    </div>
+                </article>
+
+                <article class="listed-item group shadow-lg rounded-md">
+                    <div class="relative h-64  overflow-hidden rounded-sm">
+                        <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/listed-item/item4.jpg" alt="Find more" />
+                        <!-- <div class="invisible absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div> -->
+                        <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 ease-in ">
+                            <button class="hover:cursor-pointer w-full text-sm py-2 bg-white text-slate-900 "> Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="py-5 px-3   ">
+                        <h1 class="text-lg"> Name of the art</h1>
+                        <p class="text-sm text-gray-700"> Artist: Name</p>
+                        <h2 class="text-lg"> Price: 300$</h2>
+                    </div>
+                </article>
+
+                <article class="listed-item group shadow-lg rounded-md">
+                    <div class="relative h-64  overflow-hidden rounded-sm">
+                        <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/listed-item/item5.jpg" alt="Find more" />
+                        <!-- <div class="invisible absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div> -->
+                        <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 ease-in ">
+                            <button class="hover:cursor-pointer w-full text-sm py-2 bg-white text-slate-900 "> Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="py-5 px-3   ">
+                        <h1 class="text-lg"> Name of the art</h1>
+                        <p class="text-sm text-gray-700"> Artist: Name</p>
+                        <h2 class="text-lg"> Price: 300$</h2>
+                    </div>
+                </article>
+
+                <article class="listed-item group shadow-lg rounded-md">
+                    <div class="relative h-64  overflow-hidden rounded-sm">
+                        <img class="h-full w-full object-cover object-center group-hover:scale-y-105 group-hover:scale-x-105 duration-75 ease-in" src="/images/listed-item/item6.jpg" alt="Find more" />
+                        <!-- <div class="invisible absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"> </div> -->
+                        <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 ease-in ">
+                            <button class="hover:cursor-pointer w-full text-sm py-2 bg-white text-slate-900 "> Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="py-5 px-3   ">
+                        <h1 class="text-lg"> Name of the art</h1>
+                        <p class="text-sm text-gray-700"> Artist: Name</p>
+                        <h2 class="text-lg"> Price: 300$</h2>
+                    </div>
+                </article>
+
+                <br><br>
+            </div>
+        </section>
+        <!-- FEEDBACK -->
+        <section class="feedback px-5 lg:px-15 p-20">
+            <div class="mx-auto text-center  mb-20">
+                <h1 class="text-3xl"> What Our Customer Say</h1>
+                <p> Hear from our satisfied clients who have found perfect pieces for their collections.</p>
+            </div>
+            <div class="grid gap-6 md:grid-cols-3">
+                <article class="bg-[#f8f6f2] p-5 space-y-5 grid ">
+                    <i class="fas fa-quote-left text-[#c2a284] text-6xl "></i>
+                    <p class="text-lg"> It looks even better in person! I’ve always loved Van Gogh’s work, and now I’ve got my own Starry Night at home. Super happy with the purchase.</p>
+                    <div class="self-end">
+                        <h1> Renz R. </h1>
+                        <h2 class="text-[#94908b]"> Quezon City, Philippines </h2>
+                    </div>
+                </article>
+
+                <article class="bg-[#f8f6f2] p-5 space-y-5 grid ">
+                    <i class="fas fa-quote-left text-[#c2a284] text-6xl "></i>
+                    <p class="text-lg"> Art has always inspired me, and this piece feels like a daily reminder to stay creative. Beautiful work and great customer experience!</p>
+                    <div class="self-end">
+                        <h1> Clarenz L. </h1>
+                        <h2 class="text-[#94908b]"> New York City, USA </h2>
+                    </div>
+                </article>
+
+                <article class="bg-[#f8f6f2] p-5 space-y-5 grid ">
+                    <i class="fas fa-quote-left text-[#c2a284] text-6xl "></i>
+                    <p class="text-lg"> The quality is absolutely stunning. You can feel the artistry and care that went into recreating such a legendary work. Highly recommended!</p>
+                    <div class="self-end">
+                        <h1> Luigi R. </h1>
+                        <h2 class="text-[#94908b]"> London, United Kingdom </h2>
+                    </div>
+                </article>
+
+                <!-- <article class="bg-[#f8f6f2] space-y-5 p-5 grid ">
+                    <i class="fas fa-quote-left text-[#c2a284] text-6xl "></i>
+                    <p class="text-lg"> It gave my room that extra pop it was missing. Classy, artsy, and way more affordable than I expected.</p>
+                    <div class="self-end">
+                        <h1> Renz R. </h1>
+                        <h2 class="text-[#94908b]"> Location </h2>
+                    </div>
+                </article> -->
+ 
+               <!-- <article class="bg-[#f8f6f2] p-5 space-y-5">
+                    <i class="fas fa-quote-left text-[#c2a284] text-6xl "></i>
+                    <p class="text-lg"> Never thought I’d own something that looks this legit. It’s like having a piece of the Louvre, minus the plane ticket.</p>
+                    <div>
+                        <h1> Renz R. </h1>
+                        <h2 class="text-[#94908b]"> Location </h2>
+                    </div>
+                </article> -->
+            </div>
+
+        </section>
+        
+    </main>
+
+    <footer class="px-5 py-15 bg-[#393734] text-[#b6b5b4]" id="footer">
+        <section class="grid gap-5 sm:grid-cols-3 pb-10">
+        <section>
+            <h1 class="text-white uppercase text-xl mb-3"> Alart</h1>
+            <p class="text-[#b6b5b4] font-light text-lg">Discover high-quality recreations of iconic Renaissance art, crafted to honor the vision of the original masters.</p>
+            <div class="flex gap-5 text-2xl mt-3">
+                <a href=" "><i class="fa-brands fa-facebook-f"></i></a>            
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </section>
+
+        <section class="sm:justify-self-center">
+            <h1 class="text-white uppercase text-xl mb-3"> About us</h1>
+            <nav>
+                <ul>
+                    <li> <a href="service.html"> What is ALART </a> </li>
+                    <li> <a href="service.html"> Service we offer</a> </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section>
+            <h1 class="text-white uppercase text-xl mb-3"> Contact Us </h1>
+            <div class="space-y-4">
+                <div  class="flex items-center gap-3"> 
+                    <i class="fa-solid fa-location-dot text-[#b6b5b4] text-xl"></i>
+                    <p>123 Gallery Street, Art City Philippines</p></div>
+                <div class="flex items-center gap-3"> 
+                    <i class="fa-solid fa-phone text-[#b6b5b4] text-xl"></i>
+                    <p> +63 09092637482</p>
+                </div>
+                <div class="flex items-center gap-3"> 
+                    <i class="fa-solid fa-envelope text-[#b6b5b4] text-xl"></i>
+                    <p class=""> alart@gmail.com</p> 
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="border-t pt-10 text-center sm:flex sm:justify-between">
+            <h1> &copy 2025 Renz Rosales. All rights reserved.</h1>
+            <div class="space-x-10">
+                <a href=""> Privacy Policy</a>
+                <a href=""> Terms of Service</a>
+                <a href=""> Shipping Policy</a>
+            </div>
+            
+        </section>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
