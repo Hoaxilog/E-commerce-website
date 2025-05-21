@@ -15,11 +15,11 @@
 <body class="font-[Merriweather]">
     <header class="z-50 sticky top-0 right-0 left-0">   
         <nav class=" px-5 flex justify-between items-center mx-auto py-3 bg-white md:py-5 lg:px-15">
-            <h1 class="text-2xl font-bold text-slate-900"> SHOPPY </h1>
+            <h1 class="text-2xl font-bold text-slate-900"> ALART </h1>
             <ul class="hidden gap-5 font-medium text-slate-900 md:flex md:text-sm">
                 <li> <a href="./index.html" class="">Home</a></li>
                 <li> <a href="./shopping.html" class=" ">Shop</a></li>
-                <li> <a href="service.html" class=" ">About</a></li>
+                <li> <a href="service.html" class=" ">About us</a></li>
                 <li><a href=""><i class="fa-solid fa-user text-slate-900 cursor-pointer text-lg"></i></a></li>
                 <li><a href="cart.html"><i class="fa-solid fa-cart-shopping text-slate-900 cursor-pointer text-lg"></i></a></li>
             
@@ -57,13 +57,6 @@
 
         <!-- success message -->
 
-        <div id="" class=" success-message hidden bg-black/55 fixed inset-0 flex items-center justify-center ">
-            <div class="bg-white p-4 rounded-2xl ">
-                <h1 class="text-dark-grey mb-4 text-3xl leading-tight md:text-5xl">Thanks for Purchasing!</h1>
-                <p class="text-dark-grey mb-6 text-sm leading-relaxed">You will receive shipping updates and a receipt shortly.</p>
-                <button class="p-3 dismiss-btn bg-slate-800 w-full rounded-md px-6 py-4 font-bold text-white transition-colors duration-300 hover:opacity-90">Dismiss message</button>
-            </div>
-        </div>
 
         
         <!-- MODAL -->
@@ -73,7 +66,32 @@
         </div>
         
     </main>
+
+    <!-- success message -->
+        <div id="" class="success-message hidden bg-black/55 fixed inset-0 flex items-center justify-center ">
+            <div id="successModalContent"
+             class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold text-gray-800">Purchase Confirmed!</h2>
+                </div>
+                <p class="text-gray-700 mb-6">
+                    Thank you for your purchase! Your order has been successfully placed and a confirmation email has been sent.
+                </p>
+                <button id="dismiss-btn"
+                        class="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-300 w-full">
+                    OK
+                </button>
+            </div>
+        </div>
+
+        <!-- product -->
+    <!--  -->
+    <div id="productModalOverlay"
+         class="fixed inset-0  bg-black/55 flex items-center justify-center p-4 z-50 hidden">
         
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>

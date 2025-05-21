@@ -55,10 +55,18 @@
         </div>
         
         <div id="" class="success-message hidden bg-black/55 fixed inset-0 flex items-center justify-center ">
-            <div class="bg-white p-4 rounded-2xl ">
-                <h1 class="text-dark-grey mb-4 text-3xl leading-tight md:text-5xl">Thanks for Purchasing!</h1>
-                <p class="text-dark-grey mb-6 text-sm leading-relaxed">You will receive shipping updates and a receipt shortly.</p>
-                <button  class="p-3 dismiss-btn bg-slate-800 w-full rounded-md px-6 py-4 font-bold text-white transition-colors duration-300 hover:opacity-90">Dismiss message</button>
+            <div id="successModalContent"
+             class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold text-gray-800">Purchase Confirmed!</h2>
+                </div>
+                <p class="text-gray-700 mb-6">
+                    Thank you for your purchase! Your order has been successfully placed and a confirmation email has been sent.
+                </p>
+                <button id="dismiss-btn"
+                        class="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-300 w-full">
+                    OK
+                </button>
             </div>
         </div>
 

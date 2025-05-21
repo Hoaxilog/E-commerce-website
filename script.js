@@ -119,11 +119,6 @@ if (window.location.pathname === '/shopping.html' ) {
     const add_cart = document.querySelectorAll('.add-cart')
     add_cart.forEach(button => {
       button.addEventListener('click', (e) => {
-
-
-        
-
-
         const paintingArticle = e.target.closest('.painting-list');
         const id = paintingArticle.dataset.id
         const selectedPainting = data.find(painting => painting.id == id);
@@ -168,10 +163,12 @@ if (window.location.pathname === '/shopping.html' ) {
   //responsible to show the modal when clicking the image
   //also it handling the close button 
   //and the full view of the image
+
+
   function modalShow(data) {
     const modal = document.getElementById('modal');
     html = ` 
-    <div class="body-modal bg-white rounded-lg shadow-lg w-full max-w-3xl relative min-h-3/5 max-h-4/6 max-[780px]:max-h-4/5 md:flex mx-20">
+    <div data-id=${data.id} class="body-modal bg-white rounded-lg shadow-lg w-full max-w-3xl relative min-h-3/5 max-h-4/6 max-[780px]:max-h-4/5 md:flex mx-20">
                 <!-- Close Button -->
                 <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-black text-3xl font-bold">
                   &times;
@@ -215,27 +212,62 @@ if (window.location.pathname === '/shopping.html' ) {
     const modalBox = document.querySelector('.body-modal');
 
     const success_message = document.querySelectorAll('.success-message')
-    const dismiss_btn = document.querySelectorAll('.dismiss-btn')
+    const dismiss_btn = document.getElementById('dismiss-btn')
     const buyBtn = document.querySelectorAll('.buy-btn')
 
-    dismiss_btn.forEach(element => {
-      element.addEventListener('click', () => {
+    dismiss_btn.addEventListener('click', () => {
         success_message.forEach(element => {
-          
-        element.classList.add('hidden')
+          element.classList.add('hidden')
         })
-      })
     })
 
+    
     buyBtn.forEach(element => {
-      element.addEventListener('click', () => {
-        modal.classList.toggle('hidden')
-        success_message.forEach(element => {
-          
-        element.classList.toggle('hidden')
-        })
-      })
-    })
+      element.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const paintingId = element.closest('.body-modal').dataset.id;
+        let data = await getPaintings();
+        const selectedPainting = data.find(painting => painting.id == paintingId);
+
+        // Fill the product modal with the correct info
+        const productModalOverlay = document.getElementById('productModalOverlay');
+        productModalOverlay.innerHTML = `
+          <div data-id="${selectedPainting.id}" id="productModalContent"
+               class="bg-white p-8 rounded-xl shadow-2xl max-w-lg w-full">
+              <div class="flex justify-between items-center mb-4">
+                  <h2 class="text-2xl font-bold text-gray-800">Painting Summary</h2>
+                  <button id="closeProductModalButton"
+                          class="text-gray-500 hover:text-gray-700 text-3xl leading-none focus:outline-none">
+                      &times;
+                  </button>
+              </div>
+              <img src="${selectedPainting.image}" alt="Awesome Product" class="w-full h-96 object-center object-cover rounded-lg mb-4 shadow-sm">
+              <p class="text-gray-700 mb-6">
+                  ${selectedPainting.description}
+                  <br><br>
+                  <strong class="text-2xl">Price:</strong> <span class="text-3xl"> ${selectedPainting.price} </span>
+              </p>
+              <button id="buyButton"
+                      class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-300 w-full">
+                  Confirm Purchase
+              </button>
+          </div>
+        `;
+        productModalOverlay.classList.remove('hidden');
+
+        // Close modal logic
+        document.getElementById('closeProductModalButton').onclick = () => {
+          productModalOverlay.classList.add('hidden');
+        };
+
+        // Show success message after buying
+        document.getElementById('buyButton').onclick = () => {
+          productModalOverlay.classList.add('hidden');
+          document.getElementById('modal').classList.add('hidden'); // <-- Close the first modal
+          document.querySelectorAll('.success-message').forEach(msg => msg.classList.remove('hidden'));
+        };
+      });
+    });
 
     modal.addEventListener('click', (e) => {
     if (!modalBox.contains(e.target)) {
@@ -258,9 +290,6 @@ if (window.location.pathname === '/shopping.html' ) {
 }
 
 if (window.location.pathname === '/cart.html') {
-
-  
-
 
   async function cartItem() {
     let data = await getPaintings()
@@ -333,15 +362,15 @@ if (window.location.pathname === '/cart.html') {
     );
 
     const checkout = document.getElementById('checkout');
-const success_message = document.querySelectorAll('.success-message'); // Assuming this is your modal container(s)
-const dismiss_btn = document.querySelectorAll('.dismiss-btn'); // Assuming these buttons are inside the modal
+    const success_message = document.querySelectorAll('.success-message'); // Assuming this is your modal container(s)
+    const dismiss_btn = document.getElementById('dismiss-btn'); // Assuming these buttons are inside the modal
 
-checkout.addEventListener('click', () => {
+    checkout.addEventListener('click', () => {
     // 1. Show the success message modal
-    let text = "Are you sure you want to purchase this? "
-    if(confirm(text) === true) {
-      success_message.forEach(element => {
-          element.classList.remove('hidden'); // REMOVE 'hidden' to show the modal
+      let text = "Are you sure you want to purchase this? "
+      if(confirm(text) === true) {
+        success_message.forEach(element => {
+            element.classList.remove('hidden'); // REMOVE 'hidden' to show the modal
       });
 
       // 2. Find and remove selected cart items from the DOM
@@ -360,15 +389,13 @@ checkout.addEventListener('click', () => {
     }
     
 
-});
-
-  dismiss_btn.forEach(button => {
-    button.addEventListener('click', () => {
-        success_message.forEach(modalElement => {
-            modalElement.classList.add('hidden'); 
-        });
     });
-  });
+
+    dismiss_btn.addEventListener('click', () => {
+      success_message.forEach(element => {
+        element.classList.add('hidden')
+      })
+    })
 
   }
 
